@@ -193,8 +193,7 @@ else:
                 processed_frame, count, stage = tracker.process_frame(frame)
                 
                 # Render the webcam stream
-                frame_placeholder.image(processed_frame, channels="BGR", use_container_width=True)
-                
+                frame_placeholder.image(processed_frame, channels="BGR", use_column_width=True)
                 # Update metrics live on screen
                 rep_metric.metric("Reps Completed", count)
                 stage_metric.metric("Stage", stage if stage else "Ready")
